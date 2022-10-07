@@ -7,27 +7,30 @@ document.getElementById('genera').addEventListener('click', function () {
     // Il numero di chilometri da percorrere
     const km = document.getElementById('km').value
     // Età del passeggero Sulla base di queste informazioni dovrà 
-    const userAge = document.getElementById('userAge').value
+    // const userAge = document.getElementById('userAge').value
 
     console.log(km);
-    console.log(userAge);
+    // console.log(userAge);
 
     // calcolare il prezzo totale del biglietto di viaggio
-    if (userAge < 18) {
+    const price = km * 0.21
+    const under = document.getElementById('under').checked
+    const over = document.getElementById('over').checked
+    const maggiorenne = document.getElementById('maggiorenne').checked
+
+    if (under == true) {
         discount = 0.20
-        console.log(discount);
-    } else if (userAge > 65) {
+
+    } else if (over == true) {
         discount = 0.40
-        console.log(discount);
+
     } else {
         discount = 0
-        console.log(discount);
+
     }
-    const price = km * 1
+
     const finalPrice = price - (price * discount)
-    console.log(finalPrice);
-
-
+    console.log(finalPrice.toFixed(2));
 });
 
 
