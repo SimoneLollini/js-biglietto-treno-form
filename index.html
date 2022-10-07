@@ -11,25 +11,83 @@
 </head>
 
 <body>
-    <div class="container text-center bg-danger my-5 rounded-4">
-        <div class="calcola p-5">
-            <h2 class=" text-white">Calcola prezzo biglietto:</h2>
-            <label for="km">Inserisci qui i km che devi percorrere:</label>
-            <input type="text" id="km">
+    <div class="wrapper bg-success m-5 rounded-4">
+        <div class="calc_top p-5">
+            <div class="container">
+                <h2 class=" text-white text-center">Calcola prezzo biglietto:</h2>
+                <div class="row py-5">
+                    <div class="col text-center">
+                        <div for="user_name">Inserisci il tuo nome:</div>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="col text-center">
+                        <div for="km">Inserisci qui i km che devi percorrere:</div>
+                        <input type="text" id="km">
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="age_selection">
+                            <div class="age">
+                                <input type="radio" id="under" name="age" value="Minorenne">
+                                <label for="Minorenne">Minorenne</label>
+                            </div>
+                            <div class="age">
+                                <input type="radio" id="maggiorenne" name="age" value="Maggiorenne">
+                                <label for="Maggiorenne">Maggiorenne</label>
+                            </div>
+                            <div class="age">
+                                <input type="radio" id="over" name="age" value="Over">
+                                <label for="Over">65+</label>
+                            </div>
+                        </div>
 
-            <label for="Minorenne">Minorenne</label>
-            <input type="radio" id="under" name="age" value="Minorenne">
-            <label for="Maggiorenne">Maggiorenne</label>
+                    </div>
+                </div>
+            </div>
+            <div class="calc_bot text-center">
+                <button id="genera">Genera</button>
+            </div>
 
-            <input type="radio" id="maggiorenne" name="age" value="Maggiorenne">
-            <label for="Over">Over</label>
-            <input type="radio" id="over" name="age" value="Over">
 
 
-            <button id="genera">Invia</button>
+            <div class="ticket p-3 bg-secondary mt-4 rounded-5">
+                <h2 class=" text-white text-center">Ecco qua il tuo biglietto:</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <span>Questo biglietto appartiene a:</span><span id="user_name"></span>
+                        </div>
+                        <div class="col">
+                            <h5>Offerta</h5>
+                            <div id="discount"></div>
+                        </div>
+                        <div class="col">
+                            <h5>Carrozza:</h5>
+                            <div id="carrozza">
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>Codice CP</h5>
+                            <div id="codice">
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5>
+                                Prezzo biglietto
+                            </h5>
+                            <div id="ticket_price">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
         </div>
-        <div class="ticket p-5"></div>
-        <h2 class=" text-white">Ecco qua il tuo biglietto:</h2>
 
 
 
